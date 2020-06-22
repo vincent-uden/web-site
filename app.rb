@@ -15,6 +15,10 @@ class App < Sinatra::Base
     slim :index
   end
 
+  get '/css_test' do
+    slim :css_test
+  end
+
   get '/css/*.css' do |var|
     scss ('scss/' + var).to_sym
   end
