@@ -5,3 +5,82 @@ body {
     padding: 0;
     background-color: $dark-bg; 
 }
+
+nav {
+    margin: 0;
+    padding: 1.5em;
+    background-color: $dark-bg2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0px -3px 5px 5px #000000aa;
+
+    p {
+        font-family: $header-font;
+        font-size: 30px;
+        color: $dark-fg;
+        margin: 0;
+        display: inline-block;
+    }
+    
+    div.nav_link {
+        display: inline-block;
+        margin-right: 1em;
+    }
+    
+    div.divider {
+        margin-left: auto;
+    }
+}
+
+h1 {
+    font-family: $header-font;
+    font-weight: 400;
+    font-size: 40px;
+    color: $dark-fg;
+}
+
+h2 {
+    font-family: $header-font;
+    font-weight: 400;
+    font-size: 36px;
+    color: $dark-fg;
+}
+
+h3 {
+    font-family: $header-font;
+    font-weight: 400;
+    font-size: 32px;
+    color: $dark-fg;
+}
+
+h4 {
+    font-family: $header-font;
+    font-weight: 400;
+    font-size: 28px;
+    color: $dark-fg;
+}
+
+h5 {
+    font-family: $header-font;
+    font-weight: 400;
+    font-size: 24px;
+    color: $dark-fg;
+}
+
+h6 {
+    font-family: $header-font;
+    font-weight: 400;
+    font-size: 20px;
+    color: $dark-fg;
+}
+
+p {
+    font-family: $text-font;
+    font-weight: 400;
+    font-size: 16px;
+    color: $dark-fg;
+}
+
