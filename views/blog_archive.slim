@@ -1,0 +1,13 @@
+link rel="stylesheet" type="text/css" href="/css/blog_archive.css"
+main
+    h1 Blog Posts Archive
+    div.hbar
+
+    article
+      - for month in @blog_posts
+        h2 ="#{month[0].get_month} #{month[0].get_year}"
+        ul
+        - for post in month
+          li
+            ' #{post.get_upload_date} :
+            a href="#{post.get_url}" ="#{post.get_name}"

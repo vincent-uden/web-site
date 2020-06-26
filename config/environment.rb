@@ -23,4 +23,5 @@ puts '------------------'
 # x = SiteStats.new({ "id" => 1, "visits" => 0 })
 # x.save
 
+# Database.drop_tables ['blog_posts']
 # Database.create_tables ['blog_posts']

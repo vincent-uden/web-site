@@ -29,7 +29,7 @@ class App < Sinatra::Base
   end
 
   get '/blog/archive' do
-    @blog_posts = BlogPosts.select_all({})
+    @blog_posts = BlogPosts.get_post_groups
     slim :blog_archive
   end
 

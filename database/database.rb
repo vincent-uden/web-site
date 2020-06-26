@@ -28,7 +28,8 @@ class Database
       execute 'CREATE TABLE blog_posts
       (id INTEGER PRIMARY KEY AUTOINCREMENT,
        name VARCHAR(100) NOT NULL,
-       url VARCHAR(100) NOT NULL);'
+       url VARCHAR(100) NOT NULL,
+       upload_date VARCHAR(30) NOT NULL);'
     end
   end
 
