@@ -33,6 +33,10 @@ nav {
     div.divider {
         margin-left: auto;
     }
+
+    a {
+        font-style: normal;
+    }
 }
 
 h1 {
@@ -84,3 +88,7 @@ p {
     color: $dark-fg;
 }
 
+a {
+    color: inherit;
+    font-style: italic;
+}

@@ -11,7 +11,8 @@ class App < Sinatra::Base
   end
 
   not_found do
-    nil
+    status 404
+    slim :'404', layout: false
   end
 
   get '/' do
