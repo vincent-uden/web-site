@@ -24,12 +24,16 @@ nav {
         margin: 0;
         display: inline-block;
     }
+
+    p:hover {
+        color: #ADE7FF;
+    }
     
     div.nav_link {
         display: inline-block;
         margin-right: 1em;
     }
-    
+
     div.divider {
         margin-left: auto;
     }
@@ -93,7 +97,19 @@ a {
     font-style: italic;
 }
 
+a:hover {
+    color: #ADE7FF;
+}
+
 div.indent1 {
     margin-left:  2%;
     margin-right: 2%;
+}
+
+div.hover_up {
+    transition: transform 0.2s ease-in-out;
+}
+
+div.hover_up:hover {
+    transform: translateY(-0.3em);
 }
