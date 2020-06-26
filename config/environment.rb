@@ -16,12 +16,8 @@ puts '------------------'
 puts '-   Restarting   -'
 puts '------------------'
 
-Database.drop_tables ['site_stats']
-Database.create_tables ['site_stats']
+# Database.drop_tables ['site_stats']
+# Database.create_tables ['site_stats']
 
-x = SiteStats.new({ "id" => 1, "visits" => 5 })
-x.save
-x = SiteStats.new({ "id" => 1, "visits" => 4 })
-x.save
-x = SiteStats.new({ "id" => 2, "visits" => 45 })
-x.save
+# x = SiteStats.new({ "id" => 1, "visits" => 0 })
+# x.save

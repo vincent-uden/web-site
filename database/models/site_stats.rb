@@ -13,4 +13,14 @@ class SiteStats < Table
         dp get_visits
         dp self.class.get_columns.map { |c| c.name.to_s }
     end
+
+    def self.get
+        SiteStats.new (select_all({})[0])
+    end
+
+    def self.add_visitor
+        stats = get
+        stats.set_visits (stats.get_visits + 1)
+        stats.save
+    end
 end
