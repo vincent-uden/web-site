@@ -2,4 +2,40 @@ link rel="stylesheet" type="text/css" href="/css/index.css"
 main
   h1 Vincent Udén
   article
-    p I'm a physics student currently taking working on a bachelor's degree before moving on to a master's degree in physics. When I'm not doing that I delve into programming subjects such as machine learning, writing text editors, game engines and web development.
+    h2 Who am I?
+    p
+      | I'm a physics student currently taking working on a bachelor's degree
+        before moving on to a master's degree in physics. When I'm not doing
+        that I delve into programming subjects such as machine learning, writing
+        text editors, game engines and web development.
+
+  article
+    h2 Projects I'm working on
+    p
+      ' I love having several active projects at once to provide some variety
+        in programming. This is by no means an exhaustive list of what I'm
+        working on, it's just the one's I spend the most time on at the moment.
+        For a more complete list visit my
+      a href="https://github.com/vincent-uden" github
+      '  where I try to upload
+        everything I'm working on.
+    div.indent1
+      h3
+        ' Personal Website
+        a href="https://github.com/vincent-uden/web-site" (source)
+      p
+        | This is the site you're on right now. The server is written in Ruby
+          using rackup, Sinatra and postgres for the back end stuff. To render the
+          front end the server uses Slim and Sass. It's nothing serious and most
+          likely not up to industry standards in many ways but it's something fun
+          to do when I don't feel like doing low level programming.
+
+      h3 Terminal Text Editor
+      p
+        | This is my project for when I feel like doing some heavy duty thinking
+          that I'm not used to doing. It's a terminal text editor aiming to mimic
+          Vim for now. It's written in C using n-curses and no other dependencies
+          for now (well, except the GNU corelibs of course). Another aim of the
+          project is easy configuration through the source code (à la suckless),
+          removing the need for complicated config file managing to bloat the
+          project.
