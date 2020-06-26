@@ -24,6 +24,12 @@ class Database
       (id INTEGER PRIMARY KEY AUTOINCREMENT,
        visits INTEGER);'
     end
+    if tables.include? 'blog_posts'
+      execute 'CREATE TABLE blog_posts
+      (id INTEGER PRIMARY KEY AUTOINCREMENT,
+       name VARCHAR(100) NOT NULL,
+       url VARCHAR(100) NOT NULL);'
+    end
   end
 
   def self.insert(table_name, column_names, values)

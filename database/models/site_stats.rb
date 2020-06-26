@@ -8,14 +8,10 @@ class SiteStats < Table
 
         set_id db_hash['id']
         set_visits db_hash['visits']
-
-        dp get_id
-        dp get_visits
-        dp self.class.get_columns.map { |c| c.name.to_s }
     end
 
     def self.get
-        SiteStats.new (select_all({})[0])
+        select_all({})[0]
     end
 
     def self.add_visitor

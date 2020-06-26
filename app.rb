@@ -15,6 +15,10 @@ class App < Sinatra::Base
     slim :'404', layout: false
   end
 
+  get '/css/*.css' do |var|
+    scss ('scss/' + var).to_sym
+  end
+
   get '/' do
     slim :index
   end
@@ -24,7 +28,13 @@ class App < Sinatra::Base
     slim :css_test
   end
 
-  get '/css/*.css' do |var|
-    scss ('scss/' + var).to_sym
+  get '/blog/archive' do
+    @blog_posts = BlogPosts.select_all({})
+    slim :blog_archive
   end
+
+  get '/blog/post/*' do |var|
+    slim "blog_posts/#{var}".to_sym
+  end
+
 end

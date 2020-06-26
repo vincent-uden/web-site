@@ -11,6 +11,7 @@ end
 require_relative '../database/database'
 require_relative '../database/models/tables'
 require_relative '../database/models/site_stats'
+require_relative '../database/models/blog_posts'
 
 puts '------------------'
 puts '-   Restarting   -'
@@ -21,3 +22,5 @@ puts '------------------'
 
 # x = SiteStats.new({ "id" => 1, "visits" => 0 })
 # x.save
+
+# Database.create_tables ['blog_posts']

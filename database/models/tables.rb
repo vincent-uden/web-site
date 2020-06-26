@@ -72,7 +72,7 @@ class Table
   end
 
   def self.select_all(options)
-    Database.select_all table_name, options
+    (Database.select_all table_name, options).map { |result| self.new(result) }
   end
 
   def save()
