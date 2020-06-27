@@ -1,6 +1,10 @@
 main {
     padding-top: 2em;
-    padding-left: 20%;
+    padding-left: 20vw;
+
+    * {
+        width: 60vw;
+    }
 }
 
 article {

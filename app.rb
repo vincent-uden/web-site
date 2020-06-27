@@ -38,4 +38,8 @@ class App < Sinatra::Base
     slim "blog_posts/#{var}".to_sym
   end
 
+  get '/contact' do
+    slim :contact
+  end
+
 end
