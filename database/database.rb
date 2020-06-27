@@ -31,6 +31,12 @@ class Database
        url VARCHAR(100) NOT NULL,
        upload_date VARCHAR(30) NOT NULL);'
     end
+    if tables.include? 'quotes'
+      execute 'CREATE TABLE quotes
+      (id INTEGER PRIMARY KEY AUTOINCREMENT,
+       text VARCHAR(255),
+       originator VARCHAR(100));'
+    end
   end
 
   def self.insert(table_name, column_names, values)

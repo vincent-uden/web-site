@@ -17,3 +17,10 @@ html
           p Blog
     == yield
     footer
+      ul
+        li
+          a href="https://github.com/vincent-uden" My Github
+        li
+          a href="/contact" Contact Me
+      h2 ="\"#{@quote.get_text}\""
+      h4.em ="- #{@quote.get_originator}"

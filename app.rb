@@ -8,6 +8,7 @@ class App < Sinatra::Base
       SiteStats.add_visitor
       session[:user_id] = 1
     end
+    @quote = Quotes.random
   end
 
   not_found do

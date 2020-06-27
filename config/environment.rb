@@ -12,6 +12,7 @@ require_relative '../database/database'
 require_relative '../database/models/tables'
 require_relative '../database/models/site_stats'
 require_relative '../database/models/blog_posts'
+require_relative '../database/models/quotes'
 
 puts '------------------'
 puts '-   Restarting   -'
