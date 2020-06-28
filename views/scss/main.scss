@@ -18,7 +18,7 @@ nav {
     align-items: center;
     justify-content: center;
 
-    box-shadow: 0px -3px 5px 5px #000000aa;
+    box-shadow: 0px -3px 5px 5px #000022aa;
 
     p {
         font-family: $header-font;
@@ -29,7 +29,7 @@ nav {
     }
 
     p:hover {
-        color: #ADE7FF;
+        color: $accent2;
     }
     
     div.nav_link {
@@ -58,8 +58,8 @@ footer {
     margin: 0;
     margin-top: 5em;
 
-    background-color: #212121;
-    box-shadow: 0px 3px 5px 5px #000000aa;
+    background-color: #21212C;
+    box-shadow: 0px 3px 5px 5px #000022aa;
 
     flex-shrink: 0;
 
@@ -86,42 +86,42 @@ h1 {
     font-family: $header-font;
     font-weight: 400;
     font-size: 40px;
-    color: $dark-fg;
+    color: $accent1;
 }
 
 h2 {
     font-family: $header-font;
     font-weight: 400;
     font-size: 34px;
-    color: $dark-fg;
+    color: $accent1;
 }
 
 h3 {
     font-family: $header-font;
     font-weight: 400;
     font-size: 32px;
-    color: $dark-fg;
+    color: $accent1;
 }
 
 h4 {
     font-family: $header-font;
     font-weight: 400;
     font-size: 28px;
-    color: $dark-fg;
+    color: $accent1;
 }
 
 h5 {
     font-family: $header-font;
     font-weight: 400;
     font-size: 24px;
-    color: $dark-fg;
+    color: $accent1;
 }
 
 h6 {
     font-family: $header-font;
     font-weight: 400;
     font-size: 20px;
-    color: $dark-fg;
+    color: $accent1;
 }
 
 p {
@@ -137,7 +137,7 @@ a {
 }
 
 a:hover {
-    color: #ADE7FF;
+    color: $accent2;
 }
 
 div.indent1 {
