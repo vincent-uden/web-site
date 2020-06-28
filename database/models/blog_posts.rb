@@ -33,6 +33,10 @@ class BlogPosts < Table
     output
   end
 
+  def self.get_by_url(url)
+    (select_all where: "url = ?", values: [ url ])[0]
+  end
+
   def get_day
     get_upload_date.split("-")[2]
   end

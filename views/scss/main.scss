@@ -170,3 +170,25 @@ li {
 .em {
     font-style: italic;
 }
+
+.title {
+    padding-top: 2em;
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+}
+
+.blog_post {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 70vw;
+}
+
+.accent1 {
+    color: $accent1;
+}
+
+.accent2 {
+    color: $accent2;
+}

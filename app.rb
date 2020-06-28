@@ -35,6 +35,7 @@ class App < Sinatra::Base
   end
 
   get '/blog/post/*' do |var|
+    @post = BlogPosts.get_by_url "/blog/post/#{var}"
     slim "blog_posts/#{var}".to_sym
   end
 
