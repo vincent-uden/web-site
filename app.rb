@@ -43,4 +43,9 @@ class App < Sinatra::Base
     slim :contact
   end
 
+  get '/quotes' do
+    @quotes = Quotes.get_all
+    slim :quotes
+  end
+
 end

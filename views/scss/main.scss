@@ -80,6 +80,11 @@ footer {
             display: inline;
         }
     }
+
+    p {
+        text-align: right;
+        color: #666666;
+    }
 }
 
 h1 {
@@ -129,6 +134,26 @@ p {
     font-weight: 400;
     font-size: 16px;
     color: $dark-fg;
+}
+
+td {
+    font-family: $text-font;
+    font-weight: 400;
+    font-size: 16px;
+    color: $dark-fg;
+}
+
+td.left {
+    width: 70%;
+}
+
+td.right {
+    width: 30%;
+    text-align: right;
+}
+
+tr.odd > td {
+    color: #bbbbbb;
 }
 
 a {
@@ -191,4 +216,10 @@ li {
 
 .accent2 {
     color: $accent2;
+}
+
+main.wide {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 70vw;
 }

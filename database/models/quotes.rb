@@ -15,4 +15,8 @@ class Quotes < Table
   def self.random
     (select_all order_by: "RANDOM()", limit: "1")[0]
   end
+
+  def self.get_all
+    select_all order_by: "originator ASC"
+  end
 end

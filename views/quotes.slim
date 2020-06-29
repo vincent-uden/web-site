@@ -1,0 +1,16 @@
+main.wide
+  h1 All quotes that appear in the website's footer
+  p
+    | I really do hope I don't need to tell anyone this but don't take any of
+      the quotes too seriously. Some of them were chosen for their message but
+      many are just statements I think are funny.
+
+  div.hbar
+
+  table style="margin-top: 2em"
+    - even = true
+    - for q in @quotes
+      tr class=(even ? "even":"odd")
+        td.left ="#{q.get_text}"
+        td.right ="#{q.get_originator}"
+      - even = !even
