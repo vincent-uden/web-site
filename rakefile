@@ -2,9 +2,17 @@ require 'bundler'
 Bundler.require
 
 task :run do
+  ENV['port'] = '9292'
   sh 'bundle exec rerun --ignore "*.{slim,js,css,scss}" --no-notify "rackup --host 0.0.0.0"'
 end
 
 task :debug do
+  ENV['port'] = '9292'
   sh 'rackup'
+end
+
+task :deploy do
+  ENV['port'] = '80'
+  p Process.pid
+  sh 'nohup rackup > log.txt &'
 end

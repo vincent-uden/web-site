@@ -48,4 +48,24 @@ class App < Sinatra::Base
     slim :quotes
   end
 
+  get '/admin' do
+    @visits = SiteStats.get.get_visits
+    slim :admin
+  end
+
+  post '/admin_auth' do
+    hash = BCrypt::Password.new "$2a$12$a.F6mM6TAL/j5rSBOQBxqOjtRWAeFe0f2.aWCQWIddAu/BpFoUcwG"
+    dp params["password"]
+    if hash == params["password"]
+      session['admin_auth'] = true
+    end
+    redirect back
+  end
+
+  post '/shutdown' do
+    if session['admin_auth']
+      Process.kill 'TERM', Process.pid
+    end
+  end
+
 end
