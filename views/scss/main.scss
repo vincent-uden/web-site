@@ -272,3 +272,39 @@ input[type='submit'] {
 input[type='submit']:hover {
     border: 2px solid $accent3;
 }
+
+a.anim {
+    font-family: inherit;
+    font-size: 30px;
+    font-style: inherit;
+    text-decoration: inherit;
+    color: $dark-fg;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+}
+
+a.anim:hover {
+    p {
+        color: $dark-fg;
+    }
+}
+
+a.anim::after {
+    background-color: $accent3;
+
+    border-radius: 0;
+    border-bottom: .05em solid $dark-fg;
+
+    content: "";
+    position: absolute;
+    right: 110%;
+    left: 0;
+    bottom: 0;
+
+    transition: right .2s ease-in-out;
+}
+
+a.anim:hover::after {
+    right: 0;
+}

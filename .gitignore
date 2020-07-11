@@ -58,3 +58,4 @@ build-iPhoneSimulator/
 /.sass-cache/
 
 .*.sw*
+*.db
