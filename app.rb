@@ -68,4 +68,13 @@ class App < Sinatra::Base
     end
   end
 
+  post '/ml_update' do
+    hash = BCrypt::Password.new "$2a$12$6T2nxr45oyj.Hfi7dfTPY.0.jte.b9FjGGUsGPHxItTqE3zGQxYMS"
+    if hash == params["password"]
+      $ml_status[:status] = params["status"]
+      $ml_status[:msg] = params["msg"]
+    end
+    redirect back
+  end
+
 end

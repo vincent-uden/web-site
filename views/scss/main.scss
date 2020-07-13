@@ -308,3 +308,12 @@ a.anim::after {
 a.anim:hover::after {
     right: 0;
 }
+
+code {
+    background-color: #21212C;
+    color: $dark-fg;
+    padding: 0.6em;
+    border-radius: 0.2em;
+    font-size: 14px;
+    font-family: $mono-font;
+}

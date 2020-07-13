@@ -18,6 +18,8 @@ puts '------------------'
 puts '-   Restarting   -'
 puts '------------------'
 
+$ml_status = { status: "Idle", msg: "" }
+
 # Database.drop_tables ['site_stats']
 # Database.create_tables ['site_stats']
 
