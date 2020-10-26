@@ -29,6 +29,10 @@ class App < Sinatra::Base
     slim :css_test
   end
 
+  get '/acs' do
+    slim :acs
+  end
+
   get '/blog/archive' do
     @blog_posts = BlogPosts.get_post_groups
     slim :blog_archive
