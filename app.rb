@@ -9,6 +9,7 @@ class App < Sinatra::Base
     if not session[:user_id]
       SiteStats.add_visitor
       session[:user_id] = 1
+      dp request.env["REMOTE_ADDR"]
       Connections.log_connection request.env["REMOTE_ADDR"]
     end
     @quote = Quotes.random

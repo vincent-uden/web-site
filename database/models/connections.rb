@@ -13,7 +13,9 @@ class Connections < Table
   end
 
   def self.log_connection(ip)
+    dp "### BEFORE REQUEST ###"
     country = Countries.ip_to_country ip
+    dp "### AFTER REQUEST ###"
     forbidden = [ "(Private Address)", "(Unknown Country?)" ]
     if forbidden.include? country.get_name
       return
@@ -23,6 +25,6 @@ class Connections < Table
   end
 
   def self.history
-    Database.select_all "connections", join: "countries", on: "connections.id = countries.id"
+    Database.select_all "connections", join: "countries", on: "connections.country = countries.id"
   end
 end
