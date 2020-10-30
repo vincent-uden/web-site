@@ -20,6 +20,23 @@ puts '------------------'
 
 $ml_status = { status: "Idle", msg: "" }
 
+$inspector = AwesomePrint::Inspector.new(plain: true)
+$formatter = AwesomePrint::Formatter.new($inspector)
+
+class NilClass
+  def include?(*args)
+    false
+  end
+
+  def pop(*args)
+    nil
+  end
+
+  def <<(*args)
+    nil
+  end
+end
+
 # Database.drop_tables ['site_stats']
 # Database.create_tables ['site_stats']
 

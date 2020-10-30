@@ -317,3 +317,14 @@ code {
     font-size: 14px;
     font-family: $mono-font;
 }
+
+p.codeblock {
+    background-color: #21212C;
+    color: $dark-fg;
+    padding: 0.6em;
+    border-radius: 0.2em;
+    font-size: 14px;
+    font-family: $mono-font;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}

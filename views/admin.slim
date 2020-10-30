@@ -8,6 +8,9 @@ main.wide
     h2 Machine Learning Status
     p="Status: #{$ml_status[:status]}"
     code="#{$ml_status[:msg]}"
+
+    h2 HTTP Request Data
+    p.codeblock=@req_data
     
   - else
     form method="post" action="/admin_auth"

@@ -1,7 +1,9 @@
 require_relative './config/environment'
 
+
 class App < Sinatra::Base
   enable :sessions
+
 
   before do
     if not session[:user_id]
@@ -54,6 +56,7 @@ class App < Sinatra::Base
 
   get '/admin' do
     @visits = SiteStats.get.get_visits
+    @req_data = $formatter.format(request.env)
     slim :admin
   end
 
