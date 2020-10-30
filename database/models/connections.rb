@@ -21,4 +21,8 @@ class Connections < Table
     c = Connections.new "id" => -1, "country" => country.get_id, "date" => DateTime.now.iso8601
     c.save
   end
+
+  def self.history
+    Database.select_all "connections", join: "countries", on: "connections.id = countries.id"
+  end
 end

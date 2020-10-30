@@ -58,6 +58,7 @@ class App < Sinatra::Base
   get '/admin' do
     @visits = SiteStats.get.get_visits
     @req_data = $formatter.format(request.env)
+    @history = Connections.history
     slim :admin
   end
 

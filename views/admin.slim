@@ -11,6 +11,10 @@ main.wide
 
     h2 HTTP Request Data
     p.codeblock=@req_data
+
+    h2 Connection History
+    - for row in @history
+      p.codeblock="#{row['date']} #{row['name']}"
     
   - else
     form method="post" action="/admin_auth"

@@ -36,6 +36,8 @@ $formatter = AwesomePrint::Formatter.new($inspector)
   end
 end
 
+Connections.history
+
 class NilClass
   def include?(*args)
     false
