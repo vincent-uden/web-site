@@ -39,6 +39,11 @@ class Database
     end
   end
 
+  def self.table_exists?(table_name)
+    # SELECT name FROM sqlite_master;
+    (execute 'SELECT name FROM sqlite_master WHERE name = ?', table_name).length > 0
+  end
+
   def self.insert(table_name, column_names, values)
     query = "INSERT INTO #{table_name} ("
     trimmed_values = []

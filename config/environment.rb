@@ -23,6 +23,12 @@ $ml_status = { status: "Idle", msg: "" }
 $inspector = AwesomePrint::Inspector.new(plain: true)
 $formatter = AwesomePrint::Formatter.new($inspector)
 
+[ BlogPosts, Quotes, SiteStats ].each do |table|
+  if !Database.table_exists? table.table_name
+    Database.create_tables [table.table_name]
+  end
+end
+
 class NilClass
   def include?(*args)
     false

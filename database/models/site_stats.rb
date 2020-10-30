@@ -16,6 +16,9 @@ class SiteStats < Table
 
     def self.add_visitor
         stats = get
+        if stats.nil?
+            stats = (SiteStats.new "id" => -1, "visits" => 0)
+        end
         stats.set_visits (stats.get_visits + 1)
         stats.save
     end
