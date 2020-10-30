@@ -37,6 +37,17 @@ class Database
        text VARCHAR(255),
        originator VARCHAR(100));'
     end
+    if tables.include? 'connections'
+      execute 'CREATE TABLE connections
+      (id INTEGER PRIMARY KEY AUTOINCREMENT,
+       country INTEGER,
+       date VARCHAR(100));'
+    end
+    if tables.include? 'countries'
+      execute 'CREATE TABLE countries
+      (id INTEGER PRIMARY KEY AUTOINCREMENT,
+       name VARCHAR(255));'
+    end
   end
 
   def self.table_exists?(table_name)
@@ -62,7 +73,7 @@ class Database
     end
     query = query[0..-3]
     query += ");"
-    dp trimmed_values
+    # dp trimmed_values
     execute query, trimmed_values
   end
 

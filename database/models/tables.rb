@@ -79,8 +79,7 @@ class Table
     if self.class.get_columns[0].name != :id
       raise "Table has no id column"
     end
-    if (self.class.select_all where: "id = #{get_id}", debug: true).length == 0
-      dp @column_values
+    if (self.class.select_all where: "id = #{get_id}", debug: false).length == 0
       self.class.insert @column_values
     else
       Database.update(self.class.table_name, self.class.get_columns.map { |c| c.name.to_s }, @column_values)
