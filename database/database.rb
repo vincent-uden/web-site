@@ -48,6 +48,12 @@ class Database
       (id INTEGER PRIMARY KEY AUTOINCREMENT,
        name VARCHAR(255));'
     end
+    if tables.include? 'routes'
+      execute 'CREATE TABLE routes
+      (id INTEGER PRIMARY KEY AUTOINCREMENT,
+       path VARCHAR(255),
+       visits INTEGER);'
+    end
   end
 
   def self.table_exists?(table_name)

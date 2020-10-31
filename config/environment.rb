@@ -19,6 +19,7 @@ require_relative '../database/models/blog_posts'
 require_relative '../database/models/quotes'
 require_relative '../database/models/connections'
 require_relative '../database/models/countries'
+require_relative '../database/models/routes'
 
 
 puts '------------------'
@@ -30,7 +31,7 @@ $ml_status = { status: "Idle", msg: "" }
 $inspector = AwesomePrint::Inspector.new(plain: true)
 $formatter = AwesomePrint::Formatter.new($inspector)
 
-[ BlogPosts, Quotes, SiteStats, Connections, Countries ].each do |table|
+[ BlogPosts, Quotes, SiteStats, Connections, Countries, Routes ].each do |table|
   if !Database.table_exists? table.table_name
     Database.create_tables [table.table_name]
   end

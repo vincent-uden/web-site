@@ -13,6 +13,7 @@ class App < Sinatra::Base
       Connections.log_connection request.env["REMOTE_ADDR"]
     end
     @quote = Quotes.random
+    Routes.log_route request.env["PATH_INFO"]
   end
 
   not_found do
