@@ -1,0 +1,46 @@
+@import 'vars';
+
+div#routeHistory {
+    background-color: #21212C;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    .histRow {
+        p {
+            margin-left: 1em;
+            margin-bottom: 0;
+            margin-top: 0;
+            display: inline-block;
+
+            transition: transform 0.15s ease-in-out;
+        }
+        .bar {
+            /*  position: relative;*/
+            background-color: $accent3;
+            display: inline-block;
+            height: 100%;
+            margin-left: 1em;
+
+            border-radius: 0 1em 1em 0;
+
+            transition: background-color 0.15s ease-in-out, transform 0.15s linear;
+        }
+
+
+        &:hover {
+            .bar {
+                background-color: $accent1;
+                transform: translateX(1em);
+            }
+
+            p {
+                transform: translateX(1em);
+            }
+        }
+    }
+}
+
+.codeblock {
+    height: 70vh;
+    overflow-y: scroll;
+}

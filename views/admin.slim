@@ -1,5 +1,6 @@
 main.wide
   - if session["admin_auth"]
+    link rel="stylesheet" type="text/css" href="/css/admin.css"
     h1 Administration
     p="Total visitors: #{@visits}"
     form method="post" action="/shutdown"
@@ -15,6 +16,10 @@ main.wide
     h2 Connection History
     - for row in @history
       p.codeblock="#{row['date']} #{row['name']}"
+
+    h2 Route History
+    div#routeHistory
+    script src="/js/admin.js"
     
   - else
     form method="post" action="/admin_auth"

@@ -64,6 +64,16 @@ class App < Sinatra::Base
     slim :admin
   end
 
+  get '/admin/route_history' do
+    ap Routes.get_history.to_json
+    if session['admin_auth']
+      Routes.get_history.to_json
+    else
+      status 403
+      ""
+    end
+  end
+
   post '/admin_auth' do
     hash = BCrypt::Password.new "$2a$12$a.F6mM6TAL/j5rSBOQBxqOjtRWAeFe0f2.aWCQWIddAu/BpFoUcwG"
     dp params["password"]

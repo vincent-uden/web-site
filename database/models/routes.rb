@@ -20,4 +20,8 @@ class Routes < Table
     route.set_visits (route.get_visits + 1)
     route.save
   end
+
+  def self.get_history
+    Database.select_all table_name, order_by: "visits DESC"
+  end
 end
