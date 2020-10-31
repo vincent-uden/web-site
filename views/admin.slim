@@ -11,11 +11,11 @@ main.wide
     code="#{$ml_status[:msg]}"
 
     h2 HTTP Request Data
-    p.codeblock=@req_data
+    p class="codeblock reqblock" =@req_data
 
     h2 Connection History
     - for row in @history
-      p class="codblock histrow" ="#{row['date']} #{row['name']}"
+      p.codeblock="#{row['date']} #{row['name']}"
 
     h2 Route History
     div#routeHistory
