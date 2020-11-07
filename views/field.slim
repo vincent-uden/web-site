@@ -1,0 +1,27 @@
+link rel="stylesheet" type="text/css" href="/css/index.css"
+link rel="stylesheet" type="text/css" href="/css/field.css"
+main
+  h1 Simulation of Electric Field
+  div.canvas
+    canvas.field id="field1" width="600px" height="600px"
+
+  h2 Controls
+  
+  table
+    tr
+      td Left Click
+      td Pick up/Drop charge
+    tr
+      td Right Click
+      td Flip sign of charge
+    tr
+      td Shift + Left Click
+      td Create new charge
+    tr
+      td Ctrl + Left Click
+      td Remove charge
+
+  div.break
+  h3#reset class="btn" Reset Field
+
+  script src="/js/field.js"

@@ -1,0 +1,61 @@
+@import 'vars';
+
+canvas.field {
+    border: 1px solid $accent2;
+    display: flex;
+}
+
+div.canvas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div.break {
+    flex-basis: 100%;
+}
+
+h2 {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+h3.btn {
+    background-color: $dark-bg2;
+    padding: 1em;
+    border-radius: 0.4em;
+    box-shadow: 0px 10px 0px 0px #21212C;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+h3:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 20px 0px 0px #21212C;
+}
+
+h3:active{
+    transform: translateY(5px);
+    box-shadow: 0px 5px 0px 0px #21212C;
+    transition: transform 0.06s ease-in-out, box-shadow 0.06s ease-in-out;
+}
+
+
+table {
+    flex-basis: 40%;
+    border: 2px solid #21212C;
+    border-collapse: collapse;
+}
+
+tr:nth-child(2n) {
+    background-color: $dark-bg2;
+    margin: 0;
+}
+
+tr {
+    border: 0;
+}
+
+td {
+    padding: 1em;
+    border: 0;
+}
